@@ -1,6 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat%7CRaleway&display=swap');
+
 .app-header {
-    background-color: blueviolet;
-    color: white;
-    padding: 5%;
-    height: 5%;
-  }
+ background-color: blueviolet;
+ color: white;
+ padding: 5%;
+ height: 5%;
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-end;
+ font-family: 'Montserrat', sans-serif;
+}
+h1 {
+ font-family: 'Raleway', sans-serif;
+ padding: 0;
+ margin: 0;
+}
+.brand {
+ display: flex;
+ align-items: center;
+}
+.logo img {
+ height: 100px;
+ width: 100px;
+ margin-right: 20px;
+}

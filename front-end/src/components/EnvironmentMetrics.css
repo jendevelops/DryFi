@@ -1,7 +1,19 @@
 .environment-card {
-    width: 50%;
-}
-
-.name, .metric {
-    font-size: 20px;
-}
+    width: 48%;
+    border: .5px solid #adadad;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: .5%;
+    margin: .5%;
+    box-shadow: 1px 1px 3px black;
+ }
+ .name {
+    font-size: 15px;
+ }
+ .metric {
+    font-size: 30px;
+    font-weight: bold;
+ }
