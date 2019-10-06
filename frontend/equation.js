@@ -1,4 +1,5 @@
-function timeToDry(tempC, humidity, windspeed){
+function timeToDry(tempF, humidity, windspeed){
+  tempC = (tempF-32)*5/9;
   tempK = tempC+273.15;
   x = 21.07 - (5336 / tempK);
   delta = Math.exp(x)*5336/(tempK*tempK);
