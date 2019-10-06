@@ -9,11 +9,13 @@
     padding: .5%;
     margin: .5%;
     box-shadow: 1px 1px 3px black;
-}
-.name {
+
+ }
+ .name {
     font-size: 15px;
-}
-.metric {
+ }
+ .metric {
     font-size: 30px;
     font-weight: bold;
-}
+ }
+
