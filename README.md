@@ -30,6 +30,8 @@ This application's functionality includes:
 * [Humidity Sensor](https://www.adafruit.com/product/385) - The web framework used
 * [1x USB Cable](https://www.adafruit.com/product/189) - The web framework used
 
+## Dry Time Model
+The model used for dry time is adapted from [Dodd, Peter, et al. “A1_6 Do you want to hang out?.” Physics Special Topics 10.1 (2011).] (https://journals.le.ac.uk/ojs1/index.php/pst/article/viewFile/2010/1912) Solar irradiation potential was calculated from an api call to the SolCast API at the latitude and longitude of Portland, OR (45.5N,122.6W). The current model is limited to an assumption of water evaporation on a single flat plane. Future iterations should take into consideration the type and thickness of a material.
 
 ## Authors
 
