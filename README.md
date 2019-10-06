@@ -37,10 +37,10 @@ The model used for dry time is adapted from [Dodd, Peter, et al. “A1_6 Do you 
 
 A project by Jennifer Batara, Kevin Boyle, Meagan Olsen, Phil Gear, & Jennifer Hsiao
 
-* [Jennifer Batara](https://github.com/jbatara) - The web framework used
-* [Kevin Boyle](https://github.com/lemurriot) - The web framework used
-* [Meagan Olsen](https://github.com/olsenme) - The web framework used
-* [Phil Gear](https://github.com/philgear) - The web framework used
+* [Jennifer Batara](https://github.com/jbatara) 
+* [Kevin Boyle](https://github.com/lemurriot) 
+* [Meagan Olsen](https://github.com/olsenme) 
+* [Phil Gear](https://github.com/philgear) 
 * [Jennifer Hsiao](https://github.com/hsiaochimai)
 
 
