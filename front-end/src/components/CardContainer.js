@@ -13,18 +13,7 @@ export default class CardContainer extends Component {
 			windSpeed: null,
 		}
 	}
-	componentWillReceiveProps(nextProps) {
-		if (this.props !== nextProps) {
-			console.log(';')
-			this.setState({
-				insideTemp: Number(nextProps.insideData[0].metric),
-				insideHumidity: Number(nextProps.insideData[1].metric),
-				outsideTemp: Number(nextProps.outsideData[0].metric),
-				outsideHumidity: Number(nextProps.outsideData[1].metric),
-				windSpeed: Number(nextProps.outsideData[2].metric),
-			})
-		}
-	}
+	
 
 	getDryTime = (tempF, humidity, windspeed) => {
 		const tempC = ((tempF - 32) * 5) / 9
@@ -50,9 +39,14 @@ export default class CardContainer extends Component {
 	}
 
 	render() {
-		const { insideTemp, insideHumidity } = this.state
+		const insideTemp= Number(this.props.insideData[0].metric)
+		const insideHumidity = Number(this.props.insideData[1].metric)
+		const outsideTemp = Number(this.props.outsideData[0].metric)
+		const outsideHumidity= Number(this.props.outsideData[1].metric)
+		const windSpeed= Number(this.props.outsideData[2].metric)
+		// const { insideTemp, insideHumidity } = this.state
 		const realInsideHumidity = insideHumidity / 100
-		const { outsideTemp, outsideHumidity, windSpeed } = this.state
+		// const { outsideTemp, outsideHumidity, windSpeed } = this.state
 		const realOutsideHumidity = outsideHumidity / 100
 		const insideDrytime = this.getDryTime(
 			insideTemp,
@@ -87,31 +81,31 @@ export default class CardContainer extends Component {
 					<div className="info-items">
 						{insideInfo}
 					</div>
-					<div className="dry-time-container-outer">
+					{insideDrytime[1] === 47? null:<div className="dry-time-container-outer">
 						<h3>Time to dry</h3>
 						<div className="time-to-dry">
 							<span>{insideDrytime[0]} Hours</span>
 							<span>{insideDrytime[1]} Minutes</span>
 						</div>
-					</div>
+					</div>}
 				</div>
 				<div className='dry-time-card dry-time-card-right'>
 					<h2>Outside Drying</h2>
 					<div className="info-items">
 						{outsideInfo}
 					</div>
-					<div className="dry-time-container-outer">
+				{outsideDrytime[1] === 47 ? null:	<div className="dry-time-container-outer">
 						<h3>Time to dry</h3>
 						<div className="time-to-dry">
-							{outsideDrytime[0] === 0 ? null : (
+							 
 								<span>
 									{outsideDrytime[0]}{' '}
 									{outsideDrytime[0] <= 1
 										? 'Hour'
 										: 'Hours'}
 								</span>
-							)}
-							{outsideDrytime[1] === 0 ? null : (
+							
+							{outsideDrytime[1] === 2 ? null : (
 								<span>
 									{outsideDrytime[1]}{' '}
 									{outsideDrytime[1] <= 1
@@ -120,7 +114,7 @@ export default class CardContainer extends Component {
 								</span>
 							)}
 						</div>
-					</div>
+					</div>}
 				</div>
 			</section>
 			</>
