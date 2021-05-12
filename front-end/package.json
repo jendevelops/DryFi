@@ -6,7 +6,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.5",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "react": "^16.8.6",
     "react-chartjs-2": "^2.8.0",
     "react-dom": "^16.8.6",
